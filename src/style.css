@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Stardew Valley'; /* Specify the desired font family name */
+    src: url('./fonts/Stardew_Valley.otf') format('opentype'), /* Path to the WOFF2 font file */
+         url('./fonts/Stardew_Valley.ttf') format('truetype'); /* Path to the WOFF font file */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @keyframes pulsar {
+    0% {
+        transform: scale(1) translate(-50%, -50%); /* Tamanho inicial */
+        
+    }
+    50% {
+        transform: scale(1.2) translate(-40%, -40%); /* Tamanho aumentado */
+    }
+    100% {
+        transform: scale(1) translate(-50%, -50%); /* Tamanho de volta ao original */
+    }
+}
+
+@keyframes pulsar-botao {
+    0% {
+        transform: scale(1); /* Tamanho inicial */
+        
+    }
+    50% {
+        transform: scale(1.2); /* Tamanho aumentado */
+    }
+    100% {
+        transform: scale(1); /* Tamanho de volta ao original */
+    }
+}
+
+
+.hide{
+    display: none !important;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Stardew Valley';
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-image: url('./img/bg.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.carta{
+    background-image: url('./img/mail.png');
+    height: 375px;
+    width: 666px;
+    background: no-repeat contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    
+    /*animation: pulsar 2s infinite;*/
+    
+}
+
+div.carta:hover{
+    animation: pulsar 2s infinite;
+}
+p.center{
+    text-align: center;
+}
+
+button{
+    padding: 10px 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 38pt;
+    text-align: center;
+}
+
+button:hover{
+    animation: pulsar-botao 1s infinite;
+}
+
+div.carta-escrita{
+    background-image: url('./img/mail-text.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 75px;
+    font-size: 22pt;
+    color: rgb(147, 38, 38);
+}
+
+div.escolha{
+    height: 200px;
+    width: 250px;
+    background-color: rgb(20, 93, 238);
+    text-align: center;
+    color: white;
+    font-size: 28pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 0px;
+    border-radius: 10px;
+}
+
+div.escolha img {
+    height: 50px;
+    width: 50px;
+}
